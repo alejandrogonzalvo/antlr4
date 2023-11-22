@@ -86,7 +86,7 @@ std::string CommonToken::getText() const {
   }
   size_t n = input->size();
   if (_start < n && _stop < n) {
-    return input->getText(misc::Interval(_start, _stop));
+    return input->getText(misc::Interval(_start, _stop)) + " ";
   } else {
     return "<EOF>";
   }
